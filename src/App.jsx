@@ -6,6 +6,29 @@ import { projects } from './static/projects';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { CardGrid } from './components/CardGrid';
 
+function calcularEdad(fechaNacimiento) {
+  const nacimiento = new Date(fechaNacimiento);
+  const hoy = new Date();
+
+  let edad = hoy.getFullYear() - nacimiento.getFullYear();
+
+  const mesActual = hoy.getMonth();
+  const mesNacimiento = nacimiento.getMonth();
+  const diaActual = hoy.getDate();
+  const diaNacimiento = nacimiento.getDate();
+
+  // Si todavía no pasó el cumpleaños este año, restamos 1
+  if (
+    mesActual < mesNacimiento ||
+    (mesActual === mesNacimiento && diaActual < diaNacimiento)
+  ) {
+    edad--;
+  }
+
+  return edad;
+}
+
+
 export function ThemeToggle() {
   const { mode, setMode } = useColorScheme();
   return (
@@ -46,8 +69,8 @@ export default function App() {
         <Box display="flex" alignItems="center" gap={2}>
           <Avatar src="https://avatars.githubusercontent.com/u/106201105?v=4" size="lg" sx={{ minWidth: '100px', minHeight: '100px' }} />
           <Typography maxWidth={500}>
-            Estudiante de Ingeniería en Computación.
-            Experiencia en desarrollo web, diseño de APIs RESTful y proyectos electrónicos. Main stack React y .NET, actualmente aprendiendo Node.
+            Me llamo Valentino Zucchella Paz y tengo {calcularEdad('2002-12-24')} años. Estudio Ingeniería en Computación en FCEFyN (UNC).
+            Tengo experiencia en desarrollo web, diseño de APIs RESTful y proyectos electrónicos. Main stack: React y .NET, actualmente aprendiendo Node.
             Me apasiona aprender de forma autodidacta y aplicarlo en proyectos personales.
           </Typography>
         </Box>
