@@ -2,7 +2,7 @@
 // Estructura completa con soporte para toggle de tema y organización por carpetas
 
 // src/App.tsx
-import { Box, Typography, Sheet, Button, Grid, Card, CardContent, Avatar, IconButton, Divider } from '@mui/joy';
+import { Box, Typography, Sheet, Button, Grid, Card, CardContent, Avatar, IconButton, Divider, Tabs, TabList, Tab, TabPanel, tabClasses } from '@mui/joy';
 import TechGrid from './components/TechGrid';
 import { motion } from 'framer-motion';
 import { useColorScheme } from '@mui/joy';
@@ -57,7 +57,7 @@ export default function App() {
       </Box>
 
       <Typography level="h3" mb={2} textColor={'primary.500'}>Proyectos Destacados</Typography>
-      <Grid container spacing={2} sx={{
+      {/* <Grid container spacing={2} sx={{
         px: {
           xs: 4,   // padding 4 en pantallas chicas
           sm: 6,   // a partir de 600px
@@ -65,7 +65,7 @@ export default function App() {
           lg: 14,  // a partir de 1200px
         },
       }}>
-        {projects.map((p, i) => (
+        {projects.filter(p => !p.detail).map((p, i) => (
           <Grid xs={12} sm={6} md={4} key={i} sx={{ height: '100%' }}>
             <motion.div initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -79,22 +79,167 @@ export default function App() {
                   <Typography level="body-xs" textColor="primary.500">
                     {p.tech.join(' • ')}
                   </Typography>
-                  <Button
-                    variant="outlined"
-                    size="sm"
-                    sx={{ mt: 1 }}
-                    component="a"
-                    href={p.link}
-                    target={!p.detail ? "_blank" : ''}
-                  >
-                    {p.detail ? 'Ver más' : 'Ver Github'}
-                  </Button>
+                  <Box sx={{ display: 'flex', justifyContent: 'center', gap: '12px' }}>
+                    {p.link && <Button
+                      variant="outlined"
+                      size="sm"
+                      sx={{ mt: 1, width: '100%' }}
+                      component="a"
+                      href={p.link}
+                      target={!p.detail ? "_blank" : ''}
+                    >
+                      {p.detail ? 'Ver más' : 'Ver Github'}
+                    </Button>}
+                    {p.page && <Button
+                      variant="outlined"
+                      size="sm"
+                      sx={{ mt: 1, width: '100%' }}
+                      component="a"
+                      href={p.page}
+                      target={!p.detail ? "_blank" : ''}
+                    >
+                      Ver Demo
+                    </Button>}
+                  </Box>
                 </CardContent>
               </Card>
             </motion.div>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
+
+      <Tabs aria-label="Basic tabs" defaultValue={0} sx={{
+        px: {
+          xs: 4,   // padding 4 en pantallas chicas
+          sm: 6,   // a partir de 600px
+          md: 8,   // a partir de 900px
+          lg: 14,  // a partir de 1200px
+        },
+      }} >
+        <TabList
+          sx={{
+            pt: 1,
+            justifyContent: 'center',
+            [`&& .${tabClasses.root}`]: {
+              flex: 'initial',
+              bgcolor: 'transparent',
+              '&:hover': {
+                bgcolor: 'transparent',
+              },
+              [`&.${tabClasses.selected}`]: {
+                color: 'primary.500',
+                '&::after': {
+                  height: 2,
+                  borderTopLeftRadius: 3,
+                  borderTopRightRadius: 3,
+                  bgcolor: 'primary.500',
+                },
+              },
+            },
+          }}>
+          <Tab
+          >Programación</Tab>
+          <Tab
+          >Electrónica</Tab>
+        </TabList>
+        <TabPanel value={0}>
+          <Grid container spacing={2}>
+            {projects.filter(p => !p.detail).map((p, i) => (
+              <Grid xs={12} sm={6} md={4} key={i} sx={{ height: '100%' }}>
+                <motion.div initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  viewport={{ once: true }}
+                  style={{ height: '100%' }}>
+                  <Card variant="soft" sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Typography level="title-lg" textColor={'primary.500'}>{p.title}</Typography>
+                      <Typography level="body-sm" mb={1}>{p.description}</Typography>
+                      <Typography level="body-xs" textColor="primary.500">
+                        {p.tech.join(' • ')}
+                      </Typography>
+                      <Box sx={{ display: 'flex', justifyContent: 'center', gap: '12px' }}>
+                        {p.link && <Button
+                          variant="outlined"
+                          size="sm"
+                          sx={{ mt: 1, width: '100%' }}
+                          component="a"
+                          href={p.link}
+                          target={!p.detail ? "_blank" : ''}
+                        >
+                          {p.detail ? 'Ver más' : 'Ver Github'}
+                        </Button>}
+                        {p.page && <Button
+                          variant="outlined"
+                          size="sm"
+                          sx={{ mt: 1, width: '100%' }}
+                          component="a"
+                          href={p.page}
+                          target={!p.detail ? "_blank" : ''}
+                        >
+                          Ver Demo
+                        </Button>}
+                      </Box>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </Grid>
+            ))}
+          </Grid>
+        </TabPanel>
+        <TabPanel value={1}>
+          <Grid container spacing={2} sx={{
+            px: {
+              xs: 4,   // padding 4 en pantallas chicas
+              sm: 6,   // a partir de 600px
+              md: 8,   // a partir de 900px
+              lg: 14,  // a partir de 1200px
+            },
+          }}>
+            {projects.filter(p => p.detail).map((p, i) => (
+              <Grid xs={12} sm={6} md={4} key={i} sx={{ height: '100%' }}>
+                <motion.div initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  viewport={{ once: true }}
+                  style={{ height: '100%' }}>
+                  <Card variant="soft" sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Typography level="title-lg" textColor={'primary.500'}>{p.title}</Typography>
+                      <Typography level="body-sm" mb={1}>{p.description}</Typography>
+                      <Typography level="body-xs" textColor="primary.500">
+                        {p.tech.join(' • ')}
+                      </Typography>
+                      <Box sx={{ display: 'flex', justifyContent: 'center', gap: '12px' }}>
+                        {p.link && <Button
+                          variant="outlined"
+                          size="sm"
+                          sx={{ mt: 1, width: '100%' }}
+                          component="a"
+                          href={p.link}
+                          target={!p.detail ? "_blank" : ''}
+                        >
+                          {p.detail ? 'Ver más' : 'Ver Github'}
+                        </Button>}
+                        {p.page && <Button
+                          variant="outlined"
+                          size="sm"
+                          sx={{ mt: 1, width: '100%' }}
+                          component="a"
+                          href={p.page}
+                          target={!p.detail ? "_blank" : ''}
+                        >
+                          Ver Demo
+                        </Button>}
+                      </Box>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </Grid>
+            ))}
+          </Grid>
+        </TabPanel>
+      </Tabs>
 
 
 

@@ -10,14 +10,14 @@ import adc_vid2 from '../assets/video_adc2.mp4'
 export const projects = [
     {
         id: 1,
-        title: 'Gestor de Torneos de Cartas - 💻',
+        title: 'Gestor de Torneos de Cartas',
         description: 'App fullstack con autenticación y backend en .NET.',
         tech: ['React', 'Redux', '.NET', 'MySQL'],
         link: 'https://github.com/ValentinoZucchellaPaz/CursoFrontExtrados',
     },
     {
         id: 2,
-        title: 'Conversión AD/DA y almacenamiento - ⚙️',
+        title: 'Conversión AD/DA y almacenamiento',
         description: 'Proyecto electrónico sobre conversion y guardado de una señal.',
         tech: ['RAM', 'ADC', 'DAC', 'Protoboard'],
         link: '/project/2',
@@ -27,7 +27,7 @@ export const projects = [
     },
     {
         id: 3,
-        title: 'Alarma digital - ⚙️',
+        title: 'Alarma digital',
         description: 'Alarma digital hecha como autómata de Moore',
         tech: ['FF JK', 'Compuertas Lógicas', 'Protoboard'],
         link: '/project/3',
@@ -37,7 +37,7 @@ export const projects = [
     },
     {
         id: 4,
-        title: 'Oxímetro analógico  - ⚙️',
+        title: 'Oxímetro analógico',
         description: 'Proyecto electrónico de creación de oxímetro para ver el pulso en el dedo de la mano',
         tech: ['OPAMP', 'Fototransistores', 'Filtros analógicos'],
         link: '/project/4',
@@ -47,30 +47,33 @@ export const projects = [
     },
     {
         id: 5,
-        title: 'Agenda de tareas semanales  - 💻',
+        title: 'Agenda de tareas semanales',
         description: 'CRUD con autenticación y guardado de datos',
         tech: ['React', 'Redux', 'Firebase', 'Typescript'],
         link: 'https://github.com/ValentinoZucchellaPaz/AGENDA-TU-SEMANA-REACT',
+        page: 'https://agenda-tu-semana-react.vercel.app/'
     },
     {
         id: 6,
-        title: 'Lading Page  - 💻',
+        title: 'Lading Page',
         description: 'Landing page de una empresa de subtitulado',
         tech: ['React', 'CSS', 'SEO'],
-        link: 'https://www.wiwito.com/',
+        page: 'https://www.wiwito.com/',
     },
     {
         id: 7,
-        title: 'Redux Ex. for Frontend Technical Interview - 💻',
+        title: 'Redux Ex. for Frontend Technical Interview',
         description: 'CRUD de datos con manejo de estado global',
         tech: ['React', 'Redux', 'Tremor UI'],
         link: 'https://github.com/ValentinoZucchellaPaz/redux_crud_app',
+        page: 'https://redux-crud-app-seven.vercel.app/'
     },
     {
         id: 8,
-        title: 'Ecommerce - 💻',
+        title: 'Ecommerce',
         description: 'Ecommerce como trabajo final de bootcamp',
-        tech: ['C', 'VHDL', 'Proteus'],
+        tech: ['React', 'Firebase', 'Tailwind', 'Chakra UI'],
         link: 'https://github.com/ValentinoZucchellaPaz/E-COMMERCE-REACT',
+        page: 'https://e-commerce-react-neon.vercel.app/'
     },
 ];

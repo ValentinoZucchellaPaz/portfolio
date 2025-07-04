@@ -13,8 +13,8 @@ const theme = extendTheme({
     light: {
       palette: {
         primary: {
-          solidBg: green,
-          500: green,
+          solidBg: '#00b56b',
+          500: '#00b56b',
         },
       },
     },
