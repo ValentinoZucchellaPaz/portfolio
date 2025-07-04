@@ -32,7 +32,7 @@ export default function App() {
           Valentino | Desarrollador Fullstack
         </Typography>
         <Typography level="body-md" maxWidth={700} mx="auto">
-          Creo soluciones eficientes con código limpio. Apasionado por la tecnología, la inteligencia artificial y las interfaces elegantes.
+          Fullstack (React y .NET/Node). Apasionado por la tecnología, la programación y el Karate.
         </Typography>
 
 
@@ -49,18 +49,28 @@ export default function App() {
         <Box display="flex" alignItems="center" gap={2}>
           <Avatar src="https://avatars.githubusercontent.com/u/106201105?v=4" size="lg" sx={{ minWidth: '100px', minHeight: '100px' }} />
           <Typography maxWidth={500}>
-            Estudiante de Ingeniería en Computación. Experiencia en desarrollo web, diseño de APIs RESTful y proyectos electrónicos. Fan de React, .NET y las interfaces limpias.
+            Estudiante de Ingeniería en Computación.
+            Experiencia en desarrollo web, diseño de APIs RESTful y proyectos electrónicos. Main stack React y .NET, actualmente aprendiendo Node.
+            Me apasiona aprender de forma autodidacta y aplicarlo en proyectos personales.
           </Typography>
         </Box>
       </Box>
 
       <Typography level="h3" mb={2} textColor={'primary.500'}>Proyectos Destacados</Typography>
-      <Grid container spacing={2} px={10}>
+      <Grid container spacing={2} sx={{
+        px: {
+          xs: 4,   // padding 4 en pantallas chicas
+          sm: 6,   // a partir de 600px
+          md: 8,   // a partir de 900px
+          lg: 14,  // a partir de 1200px
+        },
+      }}>
         {projects.map((p, i) => (
           <Grid xs={12} sm={6} md={4} key={i} sx={{ height: '100%' }}>
             <motion.div initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.2 }}
+              transition={{ delay: 0.2 }}
+              viewport={{ once: true }}
               style={{ height: '100%' }}>
               <Card variant="soft" sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardContent sx={{ flexGrow: 1 }}>
@@ -91,7 +101,7 @@ export default function App() {
       <Box mt={6}>
         <Typography level="h3" mb={1} textColor={'primary.500'}>Tecnologías favoritas</Typography>
         <Typography level="body-sm" maxWidth={600}>
-          Me encanta trabajar con herramientas modernas y eficientes como React, TypeScript, .NET, Node.js, Tailwind, y más. También exploro Machine Learning e interfaces hombre-máquina.
+          Me encanta trabajar con herramientas modernas y eficientes como React, TypeScript, .NET, Node.js, Tailwind, y más. También me intereso por Machine Learning en imagenes.
         </Typography>
       </Box>
 
