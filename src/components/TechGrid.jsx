@@ -1,4 +1,3 @@
-// src/components/TechGrid.tsx
 import { Box, Typography } from '@mui/joy';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';

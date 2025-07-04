@@ -1,6 +1,5 @@
-// src/pages/ProjectDetail.tsx
 import { useNavigate, useParams } from 'react-router-dom';
-import { Box, Typography, Chip, Divider, Sheet, Button, IconButton, ModalDialog, Modal, ModalClose } from '@mui/joy';
+import { Box, Typography, Chip, Divider, Sheet, IconButton, ModalDialog, Modal, ModalClose } from '@mui/joy';
 import { motion } from 'framer-motion';
 import { projects } from '../static/projects';
 import { ThemeToggle } from '../App';
