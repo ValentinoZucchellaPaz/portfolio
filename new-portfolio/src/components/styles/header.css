@@ -1,0 +1,206 @@
+/* ================================
+   HEADER BASE (DESKTOP FIRST)
+================================ */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.75rem 3rem;
+  border-bottom: var(--border-width) solid var(--border-color);
+
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+
+  position: relative;
+  z-index: 50;
+}
+
+.brand {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+/* ================================
+   NAV + CONTROLS WRAPPER
+================================ */
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ---------- NAV ---------- */
+
+.nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  background: transparent;
+  border: none;
+
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 1rem;
+
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+
+  border-radius: var(--radius);
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav-item .prompt {
+  opacity: 0.6;
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+}
+
+.nav-item.active {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+}
+
+/* ---------- CONTROLS ---------- */
+
+.header-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+
+  border-radius: var(--radius);
+  transition: background var(--transition-fast);
+}
+
+.icon-btn:hover {
+  background: var(--bg-elevated);
+}
+
+/* ---------- MENU BUTTON (MOBILE) ---------- */
+
+.menu-btn {
+  display: none;
+  font-size: 1.2rem;
+}
+
+/* ================================
+   OVERLAY
+================================ */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 40;
+}
+
+/* ================================
+   MOBILE STYLES
+================================ */
+
+@media (max-width: 767px) {
+  .app-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 260px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: var(--bg-surface);
+    border-right: var(--border-width) solid var(--border-color);
+
+    padding: 1.2rem 1rem;
+    gap: 1.5rem;
+
+    transform: translateX(-100%);
+    transition: transform var(--transition-base);
+
+    z-index: 50;
+  }
+
+  .nav-wrapper.open {
+    transform: translateX(0);
+  }
+
+  .nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 0.6rem 0;
+    font-size: 0.8rem;
+  }
+
+  .nav-item.active {
+    border-bottom: none;
+    color: var(--color-primary);
+  }
+
+  .header-controls {
+    margin-top: auto;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* ================================
+   DESKTOP SAFETY (EXPLICIT)
+================================ */
+
+@media (min-width: 768px) {
+  .nav-wrapper {
+    position: static;
+    transform: none;
+    height: auto;
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+
+  .overlay {
+    display: none;
+  }
+}

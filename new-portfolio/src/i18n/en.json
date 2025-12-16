@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "home",
+    "projects": "projects",
+    "stack": "stack",
+    "contact": "contact"
+  },
+  "hero": {
+    "title": "Hi, I'm Valentino"
+  }
+}
