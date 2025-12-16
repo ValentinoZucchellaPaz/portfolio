@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Header } from "./components/Header";
-// import { Carousel } from "./components/Carousel";
+import { Carousel } from "./components/Carousel";
 import "./App.css";
+import { Hero } from "./pages/Hero";
+import { Projects } from "./pages/Projects";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(0);
@@ -11,12 +13,15 @@ export default function App() {
       <Header activeTab={activeTab} onTabChange={setActiveTab} />
 
       <main className="app-content">
-        {/* <Carousel activeTab={activeTab}>
+        <Carousel activeTab={activeTab} onTabChange={setActiveTab}>
           <Hero />
           <Projects />
+          <Hero />
+          <Hero />
+        </Carousel>
+        {/* <Projects />
           <Stack />
-          <Contact />
-        </Carousel> */}
+          <Contact /> */}
       </main>
     </div>
   );

@@ -6,7 +6,7 @@ import type { Lang } from "../i18n";
 type I18nContextType = {
   lang: Lang;
   setLang: (lang: Lang) => void;
-  t: (path: string) => string;
+  t(path: string, options?: { returnObjects?: boolean }): any;
 };
 
 const I18nContext = createContext<I18nContextType | null>(null);
@@ -19,7 +19,12 @@ function getBrowserLang(): Lang {
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>(getBrowserLang());
 
-  function t(path: string): string {
+  function t(path: string): string;
+  function t(path: string, options: { returnObjects: true }): any;
+  function t(
+    path: string,
+    options?: { returnObjects?: boolean }
+  ): string | any {
     const keys = path.split(".");
     let value: any = translations[lang];
 
@@ -27,8 +32,13 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       value = value?.[key];
     }
 
-    if (typeof value !== "string") {
+    if (value === undefined) {
       console.warn(`Missing translation: ${lang}.${path}`);
+      return path;
+    }
+
+    if (typeof value !== "string" && !options?.returnObjects) {
+      console.warn(`Translation at ${lang}.${path} is not a string`);
       return path;
     }
 

@@ -6,6 +6,43 @@
     "contact": "contact"
   },
   "hero": {
-    "title": "Hi, I'm Valentino"
+    "command": "npm run dev",
+    "name": "Valentino Zucchella Paz",
+    "subtitle": "Fullstack Web Dev",
+    "description": "I'm a passionate developer with a constant curiosity and love for learning. I enjoy building clean, efficient, and user-friendly applications, blending logic and design. I thrive in teamwork and facing new challenges.",
+    "invite": "Check out my projects and stack!"
+  },
+  "projects": {
+    "command": "ls ./projects",
+    "title": "Projects",
+    "list": [
+      {
+        "id": 1,
+        "name": "Delivery App",
+        "status": "En Desarrollo",
+        "statusColor": "yellow",
+        "shortDescription": "Aplicación para pedidos de comida rápida.",
+        "longDescription": "Aplicación completa con backend en Node.js y frontend en React. Incluye autenticación, carrito de compras y panel administrativo.",
+        "technologies": ["React", "Node.js", "Express", "MongoDB"],
+        "links": [
+          { "label": "Demo", "url": "https://demo.deliveryapp.com" },
+          { "label": "GitHub", "url": "https://github.com/usuario/deliveryapp" }
+        ],
+        "media": ["screen1.png", "screen2.png"]
+      },
+      {
+        "id": 2,
+        "name": "Portfolio",
+        "status": "Terminado",
+        "statusColor": "green",
+        "shortDescription": "Mi portfolio profesional interactivo.",
+        "longDescription": "Portfolio en React con soporte de temas claro/oscuro, internacionalización y carrusel para proyectos.",
+        "technologies": ["React", "TypeScript", "Vite", "CSS Variables"],
+        "links": [
+          { "label": "GitHub", "url": "https://github.com/usuario/portfolio" }
+        ],
+        "media": ["home.png", "projects.png"]
+      }
+    ]
   }
 }

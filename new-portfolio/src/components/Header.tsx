@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useI18n } from "../contexts/I18nContext";
 import { useTheme } from "../contexts/ThemeContext";
+import "./styles/header.css";
 
 type HeaderProps = {
   activeTab: number;
