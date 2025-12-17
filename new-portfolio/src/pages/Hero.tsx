@@ -40,7 +40,7 @@ export function Hero() {
   }, [fullName]);
 
   return (
-    <section className="section">
+    <section className="section hero">
       <div className="command">
         <span>~$ {displayCommand}</span>
         <span className="cursor"></span>

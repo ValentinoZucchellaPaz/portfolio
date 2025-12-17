@@ -42,7 +42,77 @@
           { "label": "GitHub", "url": "https://github.com/usuario/portfolio" }
         ],
         "media": ["home.png", "projects.png"]
+      },
+      {
+        "id": 3,
+        "name": "Portfolio",
+        "status": "Terminado",
+        "statusColor": "green",
+        "shortDescription": "Mi portfolio profesional interactivo.",
+        "longDescription": "Portfolio en React con soporte de temas claro/oscuro, internacionalización y carrusel para proyectos.",
+        "technologies": ["React", "TypeScript", "Vite", "CSS Variables"],
+        "links": [
+          { "label": "GitHub", "url": "https://github.com/usuario/portfolio" }
+        ],
+        "media": ["home.png", "projects.png"]
+      },
+      {
+        "id": 4,
+        "name": "Portfolio",
+        "status": "Terminado",
+        "statusColor": "green",
+        "shortDescription": "Mi portfolio profesional interactivo.",
+        "longDescription": "Portfolio en React con soporte de temas claro/oscuro, internacionalización y carrusel para proyectos.",
+        "technologies": ["React", "TypeScript", "Vite", "CSS Variables"],
+        "links": [
+          { "label": "GitHub", "url": "https://github.com/usuario/portfolio" }
+        ],
+        "media": ["home.png", "projects.png"]
+      },
+      {
+        "id": 5,
+        "name": "Portfolio",
+        "status": "Terminado",
+        "statusColor": "green",
+        "shortDescription": "Mi portfolio profesional interactivo.",
+        "longDescription": "Portfolio en React con soporte de temas claro/oscuro, internacionalización y carrusel para proyectos.",
+        "technologies": ["React", "TypeScript", "Vite", "CSS Variables"],
+        "links": [
+          { "label": "GitHub", "url": "https://github.com/usuario/portfolio" }
+        ],
+        "media": ["home.png", "projects.png"]
       }
     ]
+  },
+  "stack": {
+    "command": "cat ./stack.json",
+    "title": "TECH STACK",
+    "frontend": {
+      "title": "frontend",
+      "skills": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "CSS (libs and native)",
+        "Redux (State Managment)"
+      ]
+    },
+    "backend": {
+      "title": "backend",
+      "skills": [
+        "Node.js",
+        "Express",
+        ".NET",
+        "Python",
+        "Redis",
+        "PostgreSQL",
+        "MongoDB",
+        "MySQL"
+      ]
+    },
+    "tools": {
+      "title": "tools",
+      "skills": ["Git", "Docker", "CI/CD", "Jest"]
+    }
   }
 }

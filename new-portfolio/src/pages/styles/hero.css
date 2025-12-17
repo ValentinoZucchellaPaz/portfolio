@@ -1,3 +1,14 @@
+.section.hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 769px) {
+  .section.hero {
+    justify-content: start;
+  }
+}
+
 .hero-photo {
   width: 120px;
   height: 120px;

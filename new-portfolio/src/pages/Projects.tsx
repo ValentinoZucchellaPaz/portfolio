@@ -1,8 +1,20 @@
 import { useEffect, useState } from "react";
-// import { ProjectCard } from "./ProjectCard";
-// import { ProjectModal } from "./ProjectModal";
+import { ProjectCard } from "../components/ProjectCard";
+import { ProjectModal } from "../components/ProjectModal";
 import { useI18n } from "../contexts/I18nContext";
-import "./styles/hero.css";
+import "./styles/projects.css";
+
+export interface ProjectInterface {
+  id: number;
+  name: string;
+  status: string;
+  statusColor: "yellow" | "red" | "green";
+  shortDescription: string;
+  longDescription: string;
+  technologies: string[];
+  links: { label: string; url: string }[];
+  media: string[];
+}
 
 export function Projects() {
   const { t } = useI18n();
@@ -10,7 +22,9 @@ export function Projects() {
 
   const commandText = t("projects.command");
   const title = t("projects.title");
-  const projectsList = t(`projects.list`, { returnObjects: true });
+  const projectsList: ProjectInterface[] = t(`projects.list`, {
+    returnObjects: true,
+  });
 
   const [displayCommand, setDisplayCommand] = useState("");
 
@@ -44,7 +58,7 @@ export function Projects() {
         <span className="cursor"></span>
       </div>
 
-      <div className="section-header">
+      <div className="section-header project">
         <h2>{title}</h2>
         <div className="projects-filters-placeholder">
           {/* Aquí luego irán filtros y búsqueda */}
@@ -52,9 +66,9 @@ export function Projects() {
         </div>
       </div>
 
-      <div className="separator" />
+      <div className="separator project" />
 
-      {/* <div className="projects-list">
+      <div className="projects-list">
         {projectsList.map((p) => (
           <ProjectCard
             key={p.id}
@@ -69,7 +83,7 @@ export function Projects() {
           project={projectsList.find((p) => p.id === activeProject)!}
           onClose={() => setActiveProject(null)}
         />
-      )} */}
+      )}
     </section>
   );
 }

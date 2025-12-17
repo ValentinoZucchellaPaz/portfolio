@@ -1,0 +1,50 @@
+.project-card {
+  background: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1rem;
+  cursor: pointer;
+  width: 400px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 769px) {
+  .project-card {
+    width: 300px;
+  }
+}
+
+.project-card:hover {
+  background: var(--bg-elevated);
+  transform: translateY(-4px);
+  box-shadow: 0 5px 10px var(--bg-elevated);
+}
+
+.project-chip {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.project-chip.green {
+  background: #4caf50;
+  color: #fff;
+}
+.project-chip.yellow {
+  background: #ffeb3b;
+  color: #000;
+}
+.project-chip.red {
+  background: #f44336;
+  color: #fff;
+}
+
+.project-tech {
+  display: inline-block;
+  margin-right: 0.4rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+}

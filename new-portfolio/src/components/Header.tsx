@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useI18n } from "../contexts/I18nContext";
 import { useTheme } from "../contexts/ThemeContext";
 import "./styles/header.css";
+import { SunIcon } from "./icons/SunIcon";
+import { MoonIcon } from "./icons/MoonIcon";
+import { LangIcon } from "./icons/LangIcon";
 
 type HeaderProps = {
   activeTab: number;
@@ -49,11 +52,11 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
 
           <div className="header-controls">
             <button className="icon-btn" onClick={toggleLang}>
-              🌐 {lang.toUpperCase()}
+              <LangIcon /> {lang.toUpperCase()}
             </button>
 
             <button className="icon-btn" onClick={toggleTheme}>
-              {theme === "dark" ? "☀" : "🌙"}
+              {theme === "dark" ? <SunIcon /> : <MoonIcon />}
             </button>
           </div>
         </div>

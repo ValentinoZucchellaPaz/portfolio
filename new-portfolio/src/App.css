@@ -16,7 +16,7 @@
   align-items: flex-start;
   justify-content: center;
   width: 80vw;
-  text-align: justify;
+  height: calc(100vh - 60px);
   padding: 2rem;
 }
 
@@ -26,6 +26,9 @@
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 1rem;
+}
+.section-header h2 {
+  margin: 0;
 }
 
 @media (max-width: 769px) {
@@ -67,4 +70,31 @@
   height: 1px;
   background: var(--border-color);
   margin: 1rem 0;
+  flex-shrink: 0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

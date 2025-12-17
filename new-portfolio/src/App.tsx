@@ -4,6 +4,7 @@ import { Carousel } from "./components/Carousel";
 import "./App.css";
 import { Hero } from "./pages/Hero";
 import { Projects } from "./pages/Projects";
+import { TechStack } from "./pages/TechStack";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(0);
@@ -16,7 +17,7 @@ export default function App() {
         <Carousel activeTab={activeTab} onTabChange={setActiveTab}>
           <Hero />
           <Projects />
-          <Hero />
+          <TechStack />
           <Hero />
         </Carousel>
         {/* <Projects />

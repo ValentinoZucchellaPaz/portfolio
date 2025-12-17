@@ -89,6 +89,10 @@
   border: none;
   color: var(--text-primary);
 
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
   padding: 0.35rem 0.6rem;
   cursor: pointer;
 
