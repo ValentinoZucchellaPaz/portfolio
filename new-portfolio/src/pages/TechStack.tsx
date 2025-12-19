@@ -10,10 +10,9 @@ export function TechStack() {
 
   const commandText = t("stack.command");
   const title = t("stack.title");
-
-  const frontend = t("stack.frontend", { returnObjects: true });
-  const backend = t("stack.backend", { returnObjects: true });
-  const tools = t("stack.tools", { returnObjects: true });
+  const stack: { title: string; skills: string[] }[] = t("stack.content", {
+    returnObjects: true,
+  });
 
   const [displayCommand, setDisplayCommand] = useState("");
 
@@ -54,9 +53,9 @@ export function TechStack() {
       <div className="separator" />
 
       <div className="scrollable-container">
-        <StackGroup title={frontend.title} skills={frontend.skills} />
-        <StackGroup title={backend.title} skills={backend.skills} />
-        <StackGroup title={tools.title} skills={tools.skills} />
+        {stack.map(({ title, skills }) => (
+          <StackGroup title={title} skills={skills} />
+        ))}
       </div>
     </section>
   );

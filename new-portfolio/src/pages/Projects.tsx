@@ -62,7 +62,7 @@ export function Projects() {
         <h2>{title}</h2>
         <div className="projects-filters-placeholder">
           {/* Aquí luego irán filtros y búsqueda */}
-          <input type="text" />
+          <button>filtros</button>
         </div>
       </div>
 

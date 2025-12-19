@@ -19,16 +19,16 @@
       {
         "id": 1,
         "name": "alias-game-api",
-        "status": "active",
+        "label": "fullstack",
+        "status": "producción",
         "statusColor": "green",
         "shortDescription": "Juego multijugador en equipo en tiempo real de adivinar palabras por turnos (Taboo).",
         "longDescription": "Los jugadores se autentican, crean o se unen a salas se dividen en equipos y toman turnos para describir y adivinar palabras.Hay un frontend con React que se comunica con el backend via HTTP (Axios) y sincronizacion en tiempo real usando WebSockets (Socket.IO).\n Es una app diseñada para correr en un contenedor de docker en local, no hay un despliegue en produccion aun",
         "technologies": [
           "Node.js",
-          "Express",
+          "WebSockets",
           "PostgreSQL",
           "Docker",
-          "WebSockets",
           "React"
         ],
         "links": [
@@ -42,27 +42,28 @@
       {
         "id": 2,
         "name": "delivery-api",
-        "status": "active",
+        "label": "backend",
+        "status": "producción",
         "statusColor": "green",
         "shortDescription": "API para aplicación de pedidos de comida rápida.",
         "longDescription": "API REST diseñada para plataformas de comida rapida y/o uso de restaurantes. Le permite al cliente hacer pedidos del menu del restaurante, calcula el precio total y tiempo de delivery, maneja los estados de las ordenes durante todo el proceso.\n Es una app diseñada para correr en un contenedor de docker en local, no hay un despliegue en produccion aun",
-        "technologies": ["Node.js", "Express", "PostgreSQL", "Docker"],
+        "technologies": ["Node.js", "PostgreSQL", "Docker"],
         "links": [
           {
             "label": "GitHub",
             "url": "https://github.com/ValentinoZucchellaPaz/delivery-api"
           }
         ],
-        "media": ["profile.jpeg"]
+        "media": []
       },
       {
         "id": 3,
-        "name": "Portfolio",
-        "status": "Terminado",
+        "name": "torneo-de-cartas",
+        "status": "producción",
         "statusColor": "green",
-        "shortDescription": "Mi portfolio profesional interactivo.",
-        "longDescription": "Portfolio en React con soporte de temas claro/oscuro, internacionalización y carrusel para proyectos.",
-        "technologies": ["React", "TypeScript", "Vite", "CSS Variables"],
+        "shortDescription": "App fullstack con autenticación y backend en .NET.",
+        "longDescription": "Proyecto fullstack que gestiona un torneo de cartas con usuarios, autenticación, roles, colección de cartas y más.",
+        "technologies": [".NET", "MySQL", "React"],
         "links": [
           { "label": "GitHub", "url": "https://github.com/usuario/portfolio" }
         ],
@@ -70,67 +71,76 @@
       },
       {
         "id": 4,
-        "name": "Portfolio",
-        "status": "Terminado",
+        "name": "agenda-tu-semana",
+        "status": "producción",
         "statusColor": "green",
-        "shortDescription": "Mi portfolio profesional interactivo.",
-        "longDescription": "Portfolio en React con soporte de temas claro/oscuro, internacionalización y carrusel para proyectos.",
-        "technologies": ["React", "TypeScript", "Vite", "CSS Variables"],
+        "shortDescription": "Aplicacion de agenda frontend",
+        "longDescription": "Implementacion Frontend avanzada, estilos minimal, responsive y mucha reactividad. Aunque aun simple, en el se implementan muchos de los conocimientos de un Frontend Junior.",
+        "technologies": ["React", "Tailwind", "Firebase"],
         "links": [
-          { "label": "GitHub", "url": "https://github.com/usuario/portfolio" }
+          {
+            "label": "GitHub",
+            "url": "https://github.com/ValentinoZucchellaPaz/AGENDA-TU-SEMANA-REACT"
+          },
+          {
+            "label": "Demo",
+            "url": "https://agenda-tu-semana-react.vercel.app/"
+          }
         ],
-        "media": ["home.png", "projects.png"]
+        "media": []
       },
       {
         "id": 5,
-        "name": "Portfolio",
-        "status": "Terminado",
-        "statusColor": "green",
-        "shortDescription": "Mi portfolio profesional interactivo.",
-        "longDescription": "Portfolio en React con soporte de temas claro/oscuro, internacionalización y carrusel para proyectos.",
-        "technologies": ["React", "TypeScript", "Vite", "CSS Variables"],
-        "links": [
-          { "label": "GitHub", "url": "https://github.com/usuario/portfolio" }
-        ],
-        "media": ["home.png", "projects.png"]
+        "name": "electronica",
+        "status": "desarrollo",
+        "statusColor": "yellow",
+        "shortDescription": "Proyectos de electronica digital varios",
+        "longDescription": "A lo largo de la carrera pude adentrarme al mundo de la electronica, haciendo proyectos como (de mas basico a mas avanzado):\n - Conversor AC/CC: capacitores y diodos.\n - Oximetro analógico: medir el pulso del dedo mediante foto transistores, filtros analog y OPAMPs.\n - Maquinas de estado: usando compuertas lógicas para distintos trabajos practicos, el mas destacable una alarma digital\n - Conversor ADC/DAC y almacenamiento: convertir una señal analog con un modulo ADC, almacenarla en una RAM y convertirla nuevamente con un DAC R2R.\n - Programacion de microcontroladores PIC en Assembly: usando displays y teclados se hicieron distintos proyectos, el mas destacable un control para la bomba de una pileta.",
+        "technologies": ["Electrónica"],
+        "links": [],
+        "media": []
       }
     ]
   },
   "stack": {
     "command": "cat ./stack.json",
     "title": "TECH STACK",
-    "frontend": {
-      "title": "frontend",
-      "skills": [
-        "React",
-        "TypeScript",
-        "Next.js",
-        "CSS (libs and native)",
-        "Redux (State Managment)"
-      ]
-    },
-    "backend": {
-      "title": "backend",
-      "skills": [
-        "Node.js",
-        "Express",
-        ".NET",
-        "Python",
-        "Redis",
-        "PostgreSQL",
-        "MongoDB",
-        "MySQL"
-      ]
-    },
-    "tools": {
-      "title": "tools",
-      "skills": ["Git", "Docker", "CI/CD", "Jest"]
-    }
+    "content": [
+      {
+        "title": "languages",
+        "skills": ["Typescript", "C#", "C++", "Python", "Assembly"]
+      },
+      {
+        "title": "backend",
+        "skills": [
+          "Node.js",
+          "Express",
+          ".NET",
+          "Redis",
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB"
+        ]
+      },
+      {
+        "title": "frontend",
+        "skills": [
+          "React",
+          "Next.js",
+          "CSS (libs and native)",
+          "Redux (State Managment)"
+        ]
+      },
+      {
+        "title": "tools",
+        "skills": ["Git", "Docker", "CI/CD", "Jest"]
+      }
+    ]
   },
   "contact": {
     "command": "contact --info",
     "title": "CONTACTO",
-    "subtitle": "Disponible para proyectos freelance y posiciones full-time",
+    "subtitle": "Disponible para proyectos freelance, posiciones full-time y cualquier consulta o feedback por algun proyecto",
     "links": [
       {
         "label": "email",
@@ -141,16 +151,6 @@
         "label": "github",
         "value": "https://github.com/ValentinoZucchellaPaz",
         "link": "https://github.com/ValentinoZucchellaPaz"
-      },
-      {
-        "label": "linkedin",
-        "value": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/",
-        "link": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/"
-      },
-      {
-        "label": "linkedin",
-        "value": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/",
-        "link": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/"
       },
       {
         "label": "linkedin",
