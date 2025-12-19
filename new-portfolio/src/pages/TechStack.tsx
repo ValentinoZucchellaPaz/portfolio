@@ -53,7 +53,7 @@ export function TechStack() {
 
       <div className="separator" />
 
-      <div className="stack-container">
+      <div className="scrollable-container">
         <StackGroup title={frontend.title} skills={frontend.skills} />
         <StackGroup title={backend.title} skills={backend.skills} />
         <StackGroup title={tools.title} skills={tools.skills} />

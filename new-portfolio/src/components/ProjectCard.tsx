@@ -10,10 +10,12 @@ type Props = {
 export const ProjectCard: FC<Props> = ({ project, onClick }) => {
   return (
     <div className="project-card" onClick={onClick}>
-      <div className={`project-chip ${project.statusColor}`}>
-        {project.status}
+      <div className="project-card-header">
+        <h3 className="project-name">{project.name}</h3>
+        <div className={`project-chip ${project.statusColor}`}>
+          {project.status}
+        </div>
       </div>
-      <h3 className="project-name">{project.name}</h3>
       <p className="project-short">{project.shortDescription}</p>
       <div className="project-techs">
         {project.technologies.map((tech) => (

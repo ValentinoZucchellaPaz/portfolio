@@ -68,7 +68,7 @@ export function Projects() {
 
       <div className="separator project" />
 
-      <div className="projects-list">
+      <div className="projects-list scrollable-container">
         {projectsList.map((p) => (
           <ProjectCard
             key={p.id}

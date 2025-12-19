@@ -18,30 +18,42 @@
     "list": [
       {
         "id": 1,
-        "name": "Delivery App",
-        "status": "En Desarrollo",
-        "statusColor": "yellow",
-        "shortDescription": "Aplicación para pedidos de comida rápida.",
-        "longDescription": "Aplicación completa con backend en Node.js y frontend en React. Incluye autenticación, carrito de compras y panel administrativo.",
-        "technologies": ["React", "Node.js", "Express", "MongoDB"],
-        "links": [
-          { "label": "Demo", "url": "https://demo.deliveryapp.com" },
-          { "label": "GitHub", "url": "https://github.com/usuario/deliveryapp" }
+        "name": "alias-game-api",
+        "status": "active",
+        "statusColor": "green",
+        "shortDescription": "Juego multijugador en equipo en tiempo real de adivinar palabras por turnos (Taboo).",
+        "longDescription": "Los jugadores se autentican, crean o se unen a salas se dividen en equipos y toman turnos para describir y adivinar palabras.Hay un frontend con React que se comunica con el backend via HTTP (Axios) y sincronizacion en tiempo real usando WebSockets (Socket.IO).\n Es una app diseñada para correr en un contenedor de docker en local, no hay un despliegue en produccion aun",
+        "technologies": [
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "Docker",
+          "WebSockets",
+          "React"
         ],
-        "media": ["screen1.png", "screen2.png"]
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/ValentinoZucchellaPaz/Alias-Game-API"
+          }
+        ],
+        "media": []
       },
       {
         "id": 2,
-        "name": "Portfolio",
-        "status": "Terminado",
+        "name": "delivery-api",
+        "status": "active",
         "statusColor": "green",
-        "shortDescription": "Mi portfolio profesional interactivo.",
-        "longDescription": "Portfolio en React con soporte de temas claro/oscuro, internacionalización y carrusel para proyectos.",
-        "technologies": ["React", "TypeScript", "Vite", "CSS Variables"],
+        "shortDescription": "API para aplicación de pedidos de comida rápida.",
+        "longDescription": "API REST diseñada para plataformas de comida rapida y/o uso de restaurantes. Le permite al cliente hacer pedidos del menu del restaurante, calcula el precio total y tiempo de delivery, maneja los estados de las ordenes durante todo el proceso.\n Es una app diseñada para correr en un contenedor de docker en local, no hay un despliegue en produccion aun",
+        "technologies": ["Node.js", "Express", "PostgreSQL", "Docker"],
         "links": [
-          { "label": "GitHub", "url": "https://github.com/usuario/portfolio" }
+          {
+            "label": "GitHub",
+            "url": "https://github.com/ValentinoZucchellaPaz/delivery-api"
+          }
         ],
-        "media": ["home.png", "projects.png"]
+        "media": ["profile.jpeg"]
       },
       {
         "id": 3,
@@ -114,5 +126,37 @@
       "title": "tools",
       "skills": ["Git", "Docker", "CI/CD", "Jest"]
     }
+  },
+  "contact": {
+    "command": "contact --info",
+    "title": "CONTACTO",
+    "subtitle": "Disponible para proyectos freelance y posiciones full-time",
+    "links": [
+      {
+        "label": "email",
+        "value": "vzucchellapaz@gmail.com",
+        "link": "mailto:vzucchellapaz@gmail.com"
+      },
+      {
+        "label": "github",
+        "value": "https://github.com/ValentinoZucchellaPaz",
+        "link": "https://github.com/ValentinoZucchellaPaz"
+      },
+      {
+        "label": "linkedin",
+        "value": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/",
+        "link": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/"
+      },
+      {
+        "label": "linkedin",
+        "value": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/",
+        "link": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/"
+      },
+      {
+        "label": "linkedin",
+        "value": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/",
+        "link": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/"
+      }
+    ]
   }
 }

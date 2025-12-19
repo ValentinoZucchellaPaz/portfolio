@@ -5,6 +5,7 @@ import "./App.css";
 import { Hero } from "./pages/Hero";
 import { Projects } from "./pages/Projects";
 import { TechStack } from "./pages/TechStack";
+import { Contact } from "./pages/Contact";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(0);
@@ -18,7 +19,7 @@ export default function App() {
           <Hero />
           <Projects />
           <TechStack />
-          <Hero />
+          <Contact />
         </Carousel>
         {/* <Projects />
           <Stack />

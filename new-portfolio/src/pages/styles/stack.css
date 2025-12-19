@@ -1,20 +1,7 @@
-/* SCROLLABLE CONTAINER */
-
-.stack-container {
-  flex: 1;
-  overflow-y: auto;
-  padding-right: 0.5rem;
-  padding-bottom: 0.5rem;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-}
-
 /* STACK BLOCK */
 
 .stack-block {
+  background-color: var(--bg-surface);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--radius);
 
@@ -51,7 +38,7 @@
 .stack-item {
   margin-left: 5px;
   padding: 0.45rem 0.75rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-main);
   font-size: 0.9rem;
   color: var(--text-primary);
 
@@ -83,15 +70,4 @@
 
 .stack-item:hover {
   background: var(--bg-elevated);
-}
-
-/* SCROLLBAR */
-
-.stack-container::-webkit-scrollbar {
-  width: 6px;
-}
-
-.stack-container::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 4px;
 }

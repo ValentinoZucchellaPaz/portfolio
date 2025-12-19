@@ -42,7 +42,7 @@ export const ProjectModal: FC<Props> = ({ project, onClose }) => {
         {project.media.length > 0 && (
           <div className="modal-gallery">
             {project.media.map((m) => (
-              <img key={m} src={`/projects/${m}`} alt={project.name} />
+              <img key={m} src={`${m}`} alt={project.name} />
             ))}
           </div>
         )}

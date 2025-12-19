@@ -29,6 +29,12 @@
 }
 .section-header h2 {
   margin: 0;
+  font-family: var(--font-terminal);
+  font-size: 1.75rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.025em;
+
+  text-transform: uppercase;
 }
 
 @media (max-width: 769px) {
@@ -71,6 +77,32 @@
   background: var(--border-color);
   margin: 1rem 0;
   flex-shrink: 0;
+}
+
+/* scrollable container */
+.scrollable-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+
+  width: 100%;
+}
+
+/* Scrollbar */
+.scrollable-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
 }
 
 /* Animaciones */

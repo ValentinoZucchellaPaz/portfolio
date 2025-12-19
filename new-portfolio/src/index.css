@@ -43,9 +43,12 @@ button {
 /* ---------- LIGHT THEME ---------- */
 [data-theme="light"] {
   /* Backgrounds */
-  --bg-main: #f7f7f7;
+  --bg-main: #ffffff;
   --bg-surface: #ffffff;
-  --bg-elevated: #eeeeee;
+  --bg-elevated: #f7f7f7;
+  /* --bg-main: #f7f7f7;
+  --bg-surface: #ffffff;
+  --bg-elevated: #eeeeee; */
 
   /* Borders */
   --border-color: #cccccc;
@@ -74,8 +77,10 @@ button {
 [data-theme="dark"] {
   /* Backgrounds */
   --bg-main: #0d0f12;
-  --bg-surface: #111417;
-  --bg-elevated: #1a1f24;
+  --bg-surface: #0d0f12;
+  --bg-elevated: #111417;
+  /* --bg-surface: #111417; */
+  /* --bg-elevated: #1a1f24; */
 
   /* Borders */
   --border-color: #2a2f35;

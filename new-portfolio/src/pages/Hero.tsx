@@ -51,7 +51,7 @@ export function Hero() {
 
         <div className="hero-name-block">
           <h1 className="hero-name">{fullName}</h1>
-          <h2 className="hero-subtitle">{subtitle}</h2>
+          <h3 className="hero-subtitle">{subtitle}</h3>
         </div>
       </div>
 
