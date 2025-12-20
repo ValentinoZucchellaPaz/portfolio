@@ -59,6 +59,7 @@
       {
         "id": 3,
         "name": "torneo-de-cartas",
+        "label": "fullstack",
         "status": "production",
         "statusColor": "green",
         "shortDescription": "Fullstack application with authentication and a .NET backend.",
@@ -70,11 +71,12 @@
             "url": "https://github.com/usuario/portfolio"
           }
         ],
-        "media": ["home.png", "projects.png"]
+        "media": []
       },
       {
         "id": 4,
         "name": "agenda-tu-semana",
+        "label": "frontend",
         "status": "production",
         "statusColor": "green",
         "shortDescription": "Frontend agenda / scheduling application.",

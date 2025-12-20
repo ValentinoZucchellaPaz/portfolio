@@ -1,0 +1,132 @@
+.project-detail-overlay {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 990;
+  background: var(--bg-main);
+
+  display: flex;
+  flex-direction: column;
+
+  transform: translateY(100%);
+  animation: slideUp 300ms ease-out forwards;
+
+  & .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-primary);
+  }
+}
+
+.project-detail-content {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* header */
+
+.project-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  & h2 {
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+  }
+}
+
+.status {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-family: var(--font-terminal);
+}
+
+/* seccion + subtitle*/
+.project-detail-section {
+  margin-top: 2rem;
+}
+
+.project-detail-section h3 {
+  font-family: var(--font-terminal);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.project-detail-description {
+  white-space: pre-line;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* links */
+.project-detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* galeria */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.gallery-item {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Scrollbar */
+.project-detail-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-detail-content::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .project-detail-content {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-detail-content {
+    padding: 1rem 10rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .project-detail-content {
+    padding: 1rem 16rem;
+  }
+}

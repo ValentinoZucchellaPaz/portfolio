@@ -9,19 +9,16 @@ import { LangIcon } from "./icons/LangIcon";
 type HeaderProps = {
   activeTab: number;
   onTabChange: (index: number) => void;
+  toggleLang: () => void;
 };
 
 const NAV_KEYS = ["home", "projects", "stack", "contact"] as const;
 
-export function Header({ activeTab, onTabChange }: HeaderProps) {
-  const { t, lang, setLang } = useI18n();
+export function Header({ activeTab, onTabChange, toggleLang }: HeaderProps) {
+  const { t, lang } = useI18n();
   const { theme, toggleTheme } = useTheme();
 
   const [open, setOpen] = useState(false);
-
-  function toggleLang() {
-    setLang(lang === "es" ? "en" : "es");
-  }
 
   function handleTabClick(index: number) {
     onTabChange(index);

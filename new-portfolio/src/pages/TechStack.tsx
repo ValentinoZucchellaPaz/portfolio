@@ -54,7 +54,7 @@ export function TechStack() {
 
       <div className="scrollable-container">
         {stack.map(({ title, skills }) => (
-          <StackGroup title={title} skills={skills} />
+          <StackGroup key={title} title={title} skills={skills} />
         ))}
       </div>
     </section>

@@ -1,0 +1,35 @@
+.pressable-btn {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.pressable-btn__face {
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-family: var(--font-terminal);
+
+  transform: translateY(0);
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+/* Hover */
+.pressable-btn:hover .pressable-btn__face {
+  background: var(--bg-main);
+  border-color: var(--color-primary);
+  box-shadow: -2px 2px 2px var(--color-primary);
+}
+
+/* Pressed */
+.pressable-btn:active .pressable-btn__face {
+  transform: translate(-2px, 2px);
+
+  box-shadow: 0 2px 0 var(--bg-main), 0 2px 6px rgba(0, 0, 0, 0.35);
+}

@@ -1,24 +1,32 @@
 import { useEffect, useState } from "react";
 import { ProjectCard } from "../components/ProjectCard";
-import { ProjectModal } from "../components/ProjectModal";
 import { useI18n } from "../contexts/I18nContext";
 import "./styles/projects.css";
 
+type Media = {
+  type: "image" | "video";
+  src: string;
+  alt: string;
+};
 export interface ProjectInterface {
   id: number;
   name: string;
   status: string;
+  label: "frontend" | "backend" | "fullstack" | "electronics";
   statusColor: "yellow" | "red" | "green";
   shortDescription: string;
   longDescription: string;
   technologies: string[];
   links: { label: string; url: string }[];
-  media: string[];
+  media: Media[];
 }
 
-export function Projects() {
+type Props = {
+  onProjectOpen: React.Dispatch<React.SetStateAction<ProjectInterface | null>>;
+};
+
+export function Projects({ onProjectOpen }: Props) {
   const { t } = useI18n();
-  const [activeProject, setActiveProject] = useState<number | null>(null);
 
   const commandText = t("projects.command");
   const title = t("projects.title");
@@ -73,17 +81,10 @@ export function Projects() {
           <ProjectCard
             key={p.id}
             project={p}
-            onClick={() => setActiveProject(p.id)}
+            onClick={() => onProjectOpen(p)}
           />
         ))}
       </div>
-
-      {activeProject && (
-        <ProjectModal
-          project={projectsList.find((p) => p.id === activeProject)!}
-          onClose={() => setActiveProject(null)}
-        />
-      )}
     </section>
   );
 }

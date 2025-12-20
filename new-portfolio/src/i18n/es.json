@@ -59,6 +59,7 @@
       {
         "id": 3,
         "name": "torneo-de-cartas",
+        "label": "fullstack",
         "status": "producción",
         "statusColor": "green",
         "shortDescription": "App fullstack con autenticación y backend en .NET.",
@@ -67,11 +68,12 @@
         "links": [
           { "label": "GitHub", "url": "https://github.com/usuario/portfolio" }
         ],
-        "media": ["home.png", "projects.png"]
+        "media": []
       },
       {
         "id": 4,
         "name": "agenda-tu-semana",
+        "label": "frontend",
         "status": "producción",
         "statusColor": "green",
         "shortDescription": "Aplicacion de agenda frontend",
@@ -94,11 +96,38 @@
         "name": "electronica",
         "status": "desarrollo",
         "statusColor": "yellow",
+        "label": "electronics",
         "shortDescription": "Proyectos de electronica digital varios",
         "longDescription": "A lo largo de la carrera pude adentrarme al mundo de la electronica, haciendo proyectos como (de mas basico a mas avanzado):\n - Conversor AC/CC: capacitores y diodos.\n - Oximetro analógico: medir el pulso del dedo mediante foto transistores, filtros analog y OPAMPs.\n - Maquinas de estado: usando compuertas lógicas para distintos trabajos practicos, el mas destacable una alarma digital\n - Conversor ADC/DAC y almacenamiento: convertir una señal analog con un modulo ADC, almacenarla en una RAM y convertirla nuevamente con un DAC R2R.\n - Programacion de microcontroladores PIC en Assembly: usando displays y teclados se hicieron distintos proyectos, el mas destacable un control para la bomba de una pileta.",
         "technologies": ["Electrónica"],
         "links": [],
-        "media": []
+        "media": [
+          {
+            "type": "video",
+            "src": "video_adc.mp4",
+            "alt": "DAC output"
+          },
+          {
+            "type": "video",
+            "src": "video_adc2.mp4",
+            "alt": "DAC output leds"
+          },
+          {
+            "type": "video",
+            "src": "oximetro_video.mp4",
+            "alt": "Medicion de pulso cardiaco del dedo"
+          },
+          {
+            "type": "image",
+            "src": "alarma_foto.jpeg",
+            "alt": "Circuito logico de alarma"
+          },
+          {
+            "type": "image",
+            "src": "alarma_diagrama_estados.png",
+            "alt": "Diagrama de estados de alarma"
+          }
+        ]
       }
     ]
   },

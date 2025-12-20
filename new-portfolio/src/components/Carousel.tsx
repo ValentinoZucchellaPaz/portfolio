@@ -4,11 +4,17 @@ import "./styles/carousel.css";
 
 type CarouselProps = {
   activeTab: number;
+  disable: boolean;
   onTabChange?: (index: number) => void;
   children: ReactNode[];
 };
 
-export function Carousel({ activeTab, onTabChange, children }: CarouselProps) {
+export function Carousel({
+  activeTab,
+  disable,
+  onTabChange,
+  children,
+}: CarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Scroll automático cuando cambia activeTab
@@ -75,7 +81,10 @@ export function Carousel({ activeTab, onTabChange, children }: CarouselProps) {
         </button>
       )}
 
-      <div className="carousel-container" ref={containerRef}>
+      <div
+        className={`carousel-container ${disable ? "disable" : ""}`}
+        ref={containerRef}
+      >
         {children.map((child, i) => (
           <div key={i} className="carousel-item">
             {child}

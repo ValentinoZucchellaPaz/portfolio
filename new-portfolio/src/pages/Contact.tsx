@@ -61,7 +61,7 @@ export function Contact() {
 
       <div className="scrollable-container">
         {links.map(({ label, value, link }) => (
-          <ContactCard label={label} value={value} href={link} />
+          <ContactCard key={value} label={label} value={value} href={link} />
         ))}
       </div>
     </section>
