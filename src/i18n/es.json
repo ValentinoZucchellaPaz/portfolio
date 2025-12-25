@@ -1,0 +1,258 @@
+{
+  "nav": {
+    "home": "inicio",
+    "projects": "proyectos",
+    "stack": "stack",
+    "contact": "contacto"
+  },
+  "hero": {
+    "command": "npm run dev",
+    "name": "Valentino Zucchella Paz",
+    "subtitle": "Desarrollador Fullstack Web",
+    "description": "Desarrollo software con foco en backend y sistemas bien pensados. Me interesa entender cómo funcionan las cosas por dentro, escribir código claro y construir soluciones que se sostengan en el tiempo. Siempre estoy aprendiendo algo nuevo y me gusta trabajar con otros para llevar ideas a algo concreto.",
+    "invite": "¡Mirá mis proyectos!"
+  },
+  "projects": {
+    "command": "ls ./proyectos",
+    "title": "Proyectos",
+    "list": [
+      {
+        "id": 1,
+        "name": "alias-game-api",
+        "label": "fullstack",
+        "statusColor": "green",
+        "shortDescription": "Juego multijugador en equipo en tiempo real de adivinar palabras por turnos (Taboo).",
+        "longDescription": "Los jugadores se autentican, crean o se unen a salas se dividen en equipos y toman turnos para describir y adivinar palabras.Hay un frontend con React que se comunica con el backend via HTTP (Axios) y sincronizacion en tiempo real usando WebSockets (Socket.IO).\n Es una app diseñada para correr en un contenedor de docker en local, no hay un despliegue en produccion aun",
+        "technologies": [
+          "Node.js",
+          "WebSockets",
+          "PostgreSQL",
+          "Docker",
+          "React"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/ValentinoZucchellaPaz/Alias-Game-API"
+          }
+        ],
+        "media": [
+          {
+            "type": "video",
+            "src": "alias_game_mute.mp4",
+            "alt": "Alias game flow"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "delivery-api",
+        "label": "backend",
+        "statusColor": "red",
+        "shortDescription": "API para aplicación de pedidos de comida rápida.",
+        "longDescription": "API REST diseñada para plataformas de comida rapida y/o uso de restaurantes. Le permite al cliente hacer pedidos del menu del restaurante, calcula el precio total y tiempo de delivery, maneja los estados de las ordenes durante todo el proceso.\n Es una app diseñada para correr en un contenedor de docker en local, no hay un despliegue en produccion aun",
+        "technologies": ["Node.js", "PostgreSQL", "Docker"],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/ValentinoZucchellaPaz/delivery-api"
+          }
+        ],
+        "media": []
+      },
+      {
+        "id": 3,
+        "name": "torneo-de-cartas",
+        "label": "fullstack",
+        "statusColor": "green",
+        "shortDescription": "App fullstack con autenticación y backend en .NET.",
+        "longDescription": "Proyecto fullstack que gestiona un torneo de cartas con usuarios, autenticación, roles, colección de cartas y más.",
+        "technologies": [".NET", "MySQL", "React"],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/ValentinoZucchellaPaz/TorneoCartas"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "cartas_form.png",
+            "alt": "Formulario de la pagina de crear usuario"
+          },
+          {
+            "type": "image",
+            "src": "cartas_tabla.png",
+            "alt": "Panel de admin para administrar usuarios"
+          },
+          {
+            "type": "image",
+            "src": "cartas_card.png",
+            "alt": "Vista de las cartas disponibles para jugar"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "agenda-tu-semana",
+        "label": "frontend",
+        "statusColor": "yellow",
+        "shortDescription": "Aplicacion de agenda frontend",
+        "longDescription": "Implementacion Frontend avanzada, estilos minimal, responsive y mucha reactividad. Aunque aun simple, en el se implementan muchos de los conocimientos de un Frontend Junior.",
+        "technologies": ["React", "Tailwind", "Firebase"],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/ValentinoZucchellaPaz/AGENDA-TU-SEMANA-REACT"
+          },
+          {
+            "label": "Demo",
+            "url": "https://agenda-tu-semana-react.vercel.app/"
+          }
+        ],
+        "media": [
+          {
+            "type": "video",
+            "src": "agenda_mute.mp4",
+            "alt": "Agenda tu semana app flow"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "electronica",
+        "statusColor": "blue",
+        "label": "electronics",
+        "shortDescription": "Proyectos de electronica digital varios",
+        "longDescription": "A lo largo de la carrera pude adentrarme al mundo de la electronica, haciendo proyectos como (de mas basico a mas avanzado):\n - Conversor AC/CC: capacitores y diodos.\n - Oximetro analógico: medir el pulso del dedo mediante foto transistores, filtros analog y OPAMPs.\n - Maquinas de estado: usando compuertas lógicas para distintos trabajos practicos, el mas destacable una alarma digital\n - Conversor ADC/DAC y almacenamiento: convertir una señal analog con un modulo ADC, almacenarla en una RAM y convertirla nuevamente con un DAC R2R.\n - Programacion de microcontroladores PIC en Assembly: usando displays y teclados se hicieron distintos proyectos, el mas destacable un control para la bomba de una pileta.",
+        "technologies": ["Electrónica"],
+        "links": [],
+        "media": [
+          {
+            "type": "video",
+            "src": "video_adc.mp4",
+            "alt": "DAC output"
+          },
+          {
+            "type": "video",
+            "src": "video_adc2.mp4",
+            "alt": "DAC output leds"
+          },
+          {
+            "type": "video",
+            "src": "oximetro_video.mp4",
+            "alt": "Medicion de pulso cardiaco del dedo"
+          },
+          {
+            "type": "image",
+            "src": "alarma_foto.jpeg",
+            "alt": "Circuito logico de alarma"
+          },
+          {
+            "type": "image",
+            "src": "alarma_diagrama_estados.png",
+            "alt": "Diagrama de estados de alarma"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "e-commerce",
+        "statusColor": "yellow",
+        "label": "frontend",
+        "shortDescription": "Aplicacion de e-commerce con React",
+        "longDescription": "Este fue uno de mis primeros proyectos en programacion, en el cual hice un e-commerce desde 0, con productos, distintas vistas, paginacion, un carrito entre otras cosas, puedes ver la demo",
+        "technologies": ["React", "Firebase", "Tailwind", "ChakraUI"],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/ValentinoZucchellaPaz/E-COMMERCE-REACT"
+          },
+          {
+            "label": "Demo",
+            "url": "https://e-commerce-react-neon.vercel.app/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "ecommerce_main.png",
+            "alt": "vista principal de pagina"
+          },
+          {
+            "type": "image",
+            "src": "ecommerce_carrito.png",
+            "alt": "vista de carrito"
+          },
+          {
+            "type": "image",
+            "src": "ecommerce_detail.png",
+            "alt": "vista de producto"
+          }
+        ]
+      }
+    ]
+  },
+  "stack": {
+    "command": "cat ./stack.json",
+    "title": "TECH STACK",
+    "content": [
+      {
+        "title": "languages",
+        "skills": ["Typescript", "C#", "C++", "Python", "Assembly"]
+      },
+      {
+        "title": "backend",
+        "skills": [
+          "Node.js",
+          "Express",
+          ".NET",
+          "Redis",
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB"
+        ]
+      },
+      {
+        "title": "frontend",
+        "skills": [
+          "React",
+          "Next.js",
+          "CSS (libs and native)",
+          "Redux (State Managment)"
+        ]
+      },
+      {
+        "title": "tools",
+        "skills": ["Git", "Docker", "CI/CD", "Jest"]
+      }
+    ]
+  },
+  "contact": {
+    "command": "contact --info",
+    "title": "CONTACTO",
+    "subtitle": "Disponible para proyectos freelance, posiciones full-time y cualquier consulta o feedback por algun proyecto",
+    "links": [
+      {
+        "label": "email",
+        "value": "vzucchellapaz@gmail.com",
+        "link": "mailto:vzucchellapaz@gmail.com"
+      },
+      {
+        "label": "github",
+        "value": "https://github.com/ValentinoZucchellaPaz",
+        "link": "https://github.com/ValentinoZucchellaPaz"
+      },
+      {
+        "label": "linkedin",
+        "value": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/",
+        "link": "https://www.linkedin.com/in/valentino-zucchella-paz-7230b0243/"
+      },
+      {
+        "label": "curriculum",
+        "value": "Actualizado a Diciembre 2025",
+        "link": "/public/CV_Valentino_Zucchella_Paz_2025.pdf"
+      }
+    ]
+  }
+}

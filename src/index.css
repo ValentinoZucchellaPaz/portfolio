@@ -1,95 +1,107 @@
-/* :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* ---------- GLOBAL RESET ---------- */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;@400;500;700&family=Inter:wght@400;500;600&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  font-family: "JetBrains Mono", monospace;
+  /* font-family: "Inter", sans-serif; */
 }
 
-
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-main);
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  overflow: hidden; /* importante para el carrusel */
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+/* ---------- BASE ---------- */
+:root {
+  --font-main: "Inter", sans-serif;
+  --font-terminal: "JetBrains Mono", monospace;
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--joy-palette-background-body);
-  color: var(--joy-palette-text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  background-image: radial-gradient(rgba(0, 230, 118, 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-position: center;
+  --radius: 0px;
+  --border-width: 1px;
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
 }
 
-/* Modal styles override for Joy Dialog image clarity */
-.joy-Modal-backdrop {
-  backdrop-filter: blur(2px) saturate(80%);
+/* ---------- LIGHT THEME ---------- */
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg-main: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f7f7f7;
+  /* --bg-main: #f7f7f7;
+  --bg-surface: #ffffff;
+  --bg-elevated: #eeeeee; */
+
+  /* Borders */
+  --border-color: #cccccc;
+
+  /* Text */
+  --text-primary: #111111;
+  --text-secondary: #444444;
+  --text-muted: #777777;
+
+  /* Accent */
+  --color-primary: #007755;
+  --color-secondary: #005544;
+  --color-highlight: #00aa77;
+
+  /* Status */
+  --color-success: #008844;
+  --color-warning: #cc8800;
+  --color-error: #bb2222;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 3px 6px rgba(0, 0, 0, 0.12);
 }
 
-.joy-ModalDialog-root img {
-  max-width: 100%;
-  max-height: 80vh;
-  border-radius: 8px;
-  object-fit: contain;
-  filter: none;
-}
+/* ---------- DARK THEME ---------- */
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-main: #0d0f12;
+  --bg-surface: #0d0f12;
+  --bg-elevated: #111417;
+  /* --bg-surface: #111417; */
+  /* --bg-elevated: #1a1f24; */
 
-a {
-  font-weight: 500;
-  color: var(--joy-palette-primary-500);
-  text-decoration: inherit;
-}
+  /* Borders */
+  --border-color: #2a2f35;
 
-a:hover {
-  text-decoration: underline;
+  /* Text */
+  --text-primary: #e6e6e6;
+  --text-secondary: #b5b5b5;
+  --text-muted: #7a7a7a;
+
+  /* Accent */
+  /* --color-primary: #00ff99; */
+  --color-primary: #3eff8b;
+  --color-secondary: #00cc77;
+  --color-highlight: #33ffad;
+
+  /* Status */
+  --color-success: #22cc88;
+  --color-warning: #ffaa33;
+  --color-error: #ff5555;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
