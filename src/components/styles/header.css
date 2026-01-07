@@ -146,11 +146,12 @@
     top: 0;
     left: 0;
 
-    height: 100vh;
+    height: 100%;
     width: 260px;
 
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
 
     background: var(--bg-surface);
     border-right: var(--border-width) solid var(--border-color);
@@ -185,7 +186,6 @@
   }
 
   .header-controls {
-    margin-top: auto;
     width: 100%;
     justify-content: space-between;
   }
