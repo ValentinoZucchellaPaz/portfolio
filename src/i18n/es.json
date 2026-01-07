@@ -46,19 +46,46 @@
       },
       {
         "id": 2,
-        "name": "delivery-api",
-        "label": "backend",
-        "statusColor": "red",
-        "shortDescription": "API para aplicación de pedidos de comida rápida.",
-        "longDescription": "API REST diseñada para plataformas de comida rapida y/o uso de restaurantes. Le permite al cliente hacer pedidos del menu del restaurante, calcula el precio total y tiempo de delivery, maneja los estados de las ordenes durante todo el proceso.\n Es una app diseñada para correr en un contenedor de docker en local, no hay un despliegue en produccion aun",
-        "technologies": ["Node.js", "PostgreSQL", "Docker"],
+        "name": "notes-challenge",
+        "label": "fullstack",
+        "statusColor": "green",
+        "shortDescription": "App de notas fullstack con login, CRUD, archivado y filtrado por categoría.",
+        "longDescription": "Desafío de entrevista fullstack realizado en 3 días. La app permite crear, editar, archivar y filtrar notas por categoría. Cada usuario tiene su propio login para guardar sus notas de forma independiente.\n\nBackend: API REST hecha con Node.js y Express, alojada en Render (tarda hasta 1 min en cold start). Frontend: React alojado en Vercel.\n\nSe implementa manejo de estado con TanStack Query, incluyendo Optimistic UI y paginación.\n\nBase de datos: PostgreSQL en Supabase, comunicación mediante Prisma ORM.",
+        "technologies": [
+          "Node.js",
+          "Express",
+          "React",
+          "TanStack Query",
+          "PostgreSQL",
+          "Prisma ORM"
+        ],
         "links": [
           {
             "label": "GitHub",
-            "url": "https://github.com/ValentinoZucchellaPaz/delivery-api"
+            "url": "https://github.com/ValentinoZucchellaPaz/ensolvers-interview"
+          },
+          {
+            "label": "Demo",
+            "url": "https://ensolvers-interview.vercel.app/"
           }
         ],
-        "media": []
+        "media": [
+          {
+            "type": "image",
+            "src": "ensolvers_interview_login.png",
+            "alt": "page login"
+          },
+          {
+            "type": "image",
+            "src": "ensolvers_interview_home.png",
+            "alt": "page home"
+          },
+          {
+            "type": "image",
+            "src": "ensolvers_interview_create_note.png",
+            "alt": "create note form modal"
+          }
+        ]
       },
       {
         "id": 3,
